@@ -82,6 +82,11 @@ if (!$service) {
                     <label for="duration">Duration (minutes):</label>
                     <input type="number" name="duration" class="form-control" id="duration" value="<?= htmlspecialchars($service['duration']) ?>" required>
                 </div>
+                <div class="form-group">
+                    <label for="description">Service Description:</label>
+                    <textarea name="description" class="form-control" id="description" rows="5"><?= htmlspecialchars($service['description'] ?? '') ?></textarea>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Update Service</button>
             </form>
         <?php elseif ($service): ?>
