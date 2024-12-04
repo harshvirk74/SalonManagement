@@ -2,6 +2,9 @@
 include 'session_connection.php';
 include 'db_connect.php';
 
+
+
+
 // Check if user is logged in; set role to "guest" for non-logged-in users
 if (!isset($_SESSION['user_id'])) {
     $_SESSION['role'] = 'guest';
@@ -52,6 +55,8 @@ if (!$service) {
     <meta charset="UTF-8">
     <title>Edit Service</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
 </head>
 <body class="bg-dark text-light">
     <?php include('navbar.php'); ?>
