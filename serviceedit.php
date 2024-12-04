@@ -86,6 +86,16 @@ if (!$service) {
                     <label for="description">Service Description:</label>
                     <textarea name="description" class="form-control" id="description" rows="5"><?= htmlspecialchars($service['description'] ?? '') ?></textarea>
                 </div>
+                <script>
+                    tinymce.init({
+                    selector: '#description',
+                    menubar: false,
+                    plugins: 'advlist autolink lists link charmap preview',
+                    toolbar: 'undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist',
+                    height: 300
+                                    });
+                </script>
+
 
                 <button type="submit" class="btn btn-primary">Update Service</button>
             </form>
